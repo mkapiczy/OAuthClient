@@ -1,4 +1,4 @@
-package com.github.britter.springbootherokudemo;
+package com.github.mkapiczy.oauth_client;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

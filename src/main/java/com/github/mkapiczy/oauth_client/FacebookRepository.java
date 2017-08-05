@@ -1,4 +1,4 @@
-package com.github.britter.springbootherokudemo;
+package com.github.mkapiczy.oauth_client;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

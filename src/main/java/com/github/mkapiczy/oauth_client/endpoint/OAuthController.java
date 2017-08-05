@@ -1,7 +1,5 @@
-package com.github.britter.springbootherokudemo.endpoint;
+package com.github.mkapiczy.oauth_client.endpoint;
 
-import com.github.britter.springbootherokudemo.FacebookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,16 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/oauth")
 public class OAuthController {
 
-    private FacebookRepository repository;
-    private String clientId = "qtbmgp9cl9vtel86fcgiuicfol";
     String appDomain = "http://localhost:8080";
     private String redirectUri = appDomain + "/oauth/handleRedirect";
-    private String OAuthAuthorizationUrl = "http://localhost:8090/oauth/authenticate?client_id=%s&redirect_uri=%s";
+    private String OAuthAuthorizationUrl = "https://oauth-authorization-server.herokuapp.com/oauth/authenticate?client_id=%s&redirect_uri=%s";
 
-    @Autowired
-    public OAuthController(FacebookRepository repository) {
-        this.repository = repository;
-    }
+    private String clientId = "qu6gupg94k6qtil03p92ilnqkr";
+
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public ModelAndView redirectToOAuthLoginPage(HttpServletRequest request, HttpServletResponse response) {
