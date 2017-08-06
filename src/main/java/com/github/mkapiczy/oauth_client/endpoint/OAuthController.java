@@ -32,8 +32,8 @@ public class OAuthController {
     private String oAuthAccessTokenUrl = oauthProviderDomain + "/oauth/access_token?client_id=%s&redirect_uri=%s&client_secret=%s&code=%s";
     private String oAuthResourceUrl = oauthProviderDomain + "/oauth/resource?access_token=%s";
 
-    private String appId = "cti431nt4kd5podulp5hvl9s1a";
-    private String appSecret = "l8aj33dt8p9gn11u1i8cqne9li";
+    private String appId = "h51qjfqvqsraoio05vs9446a7d";
+    private String appSecret = "enkibsiq25l456q3ku2b79oe1t";
 
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
