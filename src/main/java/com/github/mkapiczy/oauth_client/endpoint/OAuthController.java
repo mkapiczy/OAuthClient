@@ -22,10 +22,10 @@ import java.net.URL;
 @RequestMapping("/oauth")
 public class OAuthController {
 
-    String appDomain = "http://localhost:8080";
+//    String appDomain = "http://localhost:8080";
+    String appDomain = "https://oauth-2-client.herokuapp.com";
     private String redirectUri = appDomain + "/oauth/handleRedirect";
 
-    //    private String oAuthAuthorizationUrl = "https://oauth-authorization-server.herokuapp.com/oauth/authenticate?client_id=%s&redirect_uri=%s";
 //    private String oauthProviderDomain = "http://localhost:8090";
     private String oauthProviderDomain = "https://oauth-authorization-server.herokuapp.com";
     private String oAuthAuthorizationUrl = oauthProviderDomain + "/oauth/authenticate?client_id=%s&redirect_uri=%s";
