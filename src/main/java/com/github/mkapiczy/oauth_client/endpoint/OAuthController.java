@@ -32,8 +32,8 @@ public class OAuthController {
     private String oAuthAccessTokenUrl = oauthProviderDomain + "/oauth/access_token?client_id=%s&redirect_uri=%s&client_secret=%s&code=%s";
     private String oAuthResourceUrl = oauthProviderDomain + "/oauth/resource?access_token=%s";
 
-    private String appId = "cc1ogtfhec1pj8o1edo677jjug";
-    private String appSecret = "appSecret";
+    private String appId = "cti431nt4kd5podulp5hvl9s1a";
+    private String appSecret = "l8aj33dt8p9gn11u1i8cqne9li";
 
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
@@ -106,10 +106,11 @@ public class OAuthController {
             Gson gson = new Gson();
             ResourceResponse resourceResponse = gson.fromJson(outputString, ResourceResponse.class);
 
-            System.out.println(resourceResponse.appOwner);
+            System.out.println(resourceResponse.getAppOwner());
 
             ModelAndView modelAndView = new ModelAndView("loggedIn");
-            modelAndView.getModelMap().addAttribute("appOwner", resourceResponse.appOwner);
+            modelAndView.getModelMap().addAttribute("appOwner", resourceResponse.getAppOwner());
+            modelAndView.getModelMap().addAttribute("email", resourceResponse.getEmail());
             return modelAndView;
         } catch (ProtocolException e) {
             e.printStackTrace();

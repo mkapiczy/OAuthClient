@@ -10,20 +10,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
 </head>
 <body>
-<h3>You are logged in as
-    <div th:text="${appOwner}"></div>
-    !
-</h3>
-
-<form action="/facebook/logout" method="POST">
-    <input type="hidden" name="scope" value="user_posts"/>
-    <div class="formInfo">
-        <p>You are connected to OAuth service provider. Click the button to logout.</p>
+<div class="container">
+    <div class="page-header">
+        <h1>OAuth 2 Authorization Client</h1>
+        <p class="lead">You are logged in as
+        <div th:text="${appOwner}"></div>
+        </p>
     </div>
-    <p>
-        <button type="submit">Logout!</button>
-    </p>
-</form>
+
+    <div class="text-center">Your private email address:
+        <div th:text="${email}"></div>
+    </div>
+
+    <form action="/facebook/logout" method="POST">
+        <input type="hidden" name="scope" value="user_posts"/>
+        <div class="formInfo">
+            <p>You are connected to OAuth service provider. Click the button to logout.</p>
+        </div>
+        <p>
+            <button type="submit">Logout!</button>
+        </p>
+    </form>
+</div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -2,23 +2,32 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Oauth client App</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
 </head>
 <body>
-<h3>Connect to Facebook</h3>
-
-<form action="/oauth/login" method="POST">
-    <input type="hidden" name="scope" value="user_posts" />
-    <div class="formInfo">
-        <p>You aren't logged in. Click the button to connect this application with your OAuth service provider account.</p>
+<div class="container">
+    <div class="page-header">
+        <h1>OAuth 2 Authorization Client</h1>
+        <p class="lead">Connect to OAuth Service</p>
     </div>
-    <p><button type="submit">Connect to Facebook</button></p>
-</form>
+
+
+    <form action="/oauth/login" method="POST">
+        <input type="hidden" name="scope" value="user_posts"/>
+        <div class="formInfo">
+            <p>You aren't logged in. Click the button to connect this application with your OAuth service provider
+                account.</p>
+        </div>
+        <p>
+            <button type="submit">Connect to OAuth Service</button>
+        </p>
+    </form>
+</div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
