@@ -1,7 +1,7 @@
 package com.github.mkapiczy.oauth_client.endpoint;
 
-import com.github.mkapiczy.oauth_client.ResourceResponse;
-import com.github.mkapiczy.oauth_client.TokenResponse;
+import com.github.mkapiczy.oauth_client.entity.dto.ResourceResponse;
+import com.github.mkapiczy.oauth_client.entity.dto.TokenResponse;
 import com.google.gson.Gson;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

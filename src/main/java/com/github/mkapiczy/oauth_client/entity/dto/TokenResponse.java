@@ -1,4 +1,4 @@
-package com.github.mkapiczy.oauth_client;
+package com.github.mkapiczy.oauth_client.entity.dto;
 
 public class TokenResponse {
     public String accessToken;
